@@ -132,7 +132,7 @@ function hungryDog(age,lbs) {
   else if (age>=1 && 6<=lbs<=10) {
     return lbs * .04
   }
-  else if (age>=1 && 11<=lbs<=15) {
+  else if (age>=1 && 11<= lbs || lbs <= 15) {
     return lbs * .03
   }
   else if (age>=1 && lbs > 15) {
@@ -261,7 +261,11 @@ Using the annoyingSong function below do the following:
       "(number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall"
 */
 
-function annoyingSong(x){
+ function annoyingSong(i) {
+   
+    return annoyingSong(i)
+  
+ }
         
 
 
@@ -280,9 +284,25 @@ Using the grade function below do the following:
    below 60 = F
 */
   
-function grade(age){
-    age
+function grade(score){
+    if (score >= 90) {
+      return "You got an A"
+    }
+    else if (score >= 80) {
+      return "You got a B"
+    }
+    else if (score >= 70) {
+      return "You got a C"
+    }
+    else if (score >= 60) {
+      return "You got a D"
+    }
+    else {
+      return "You got a F"
+    }
   }
+
+  console.log(grade(75))
   
   
   
@@ -302,7 +322,7 @@ Using the vowelCounter function below do the following:
 
 
 function vowelCounter(age) {
-    age
+   return age
 }
 
 
