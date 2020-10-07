@@ -16,7 +16,15 @@ Do the following:
    2. Return true if age is 18 or higher
 
    HINT: no function required
-*/
+*/ 
+let votingAge = 20;
+if (votingAge >= 18); {
+  console.log("True");
+}
+
+
+
+
 
 
 
@@ -30,7 +38,12 @@ Do the following:
 
    HINT: no function required
 */
+let var1 = 7;
+let var2 = 9;
 
+if (var2 > 0); {
+  console.log(var1 * 2);
+}
 
 
 
@@ -45,6 +58,9 @@ Do the following:
 
    HINT: look up the Number method
 */
+let string1 = "1999";
+var s = Number(string1)
+console.log(s);
 
 
 
@@ -58,10 +74,10 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-    /*add your code here*/
+function multiply(a,b){
+    return a * b;
   }
-
+console.log(multiply(10,3))
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -74,9 +90,11 @@ Do the following:
    3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-    /*add your code here*/
+function dogYears(age){
+    return age * 7
 }
+
+console.log(dogYears(2))
 
 
 
@@ -107,9 +125,35 @@ Use the hungryDog function and feeding requirements below to do the following:
   NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(/*add your code here*/){
-    /*add your code here*/
+function hungryDog(age,lbs) {
+  if (age>=1 && lbs<=5) {
+    return lbs * .05
   }
+  else if (age>=1 && 6<=lbs<=10) {
+    return lbs * .04
+  }
+  else if (age>=1 && 11<=lbs<=15) {
+    return lbs * .03
+  }
+  else if (age>=1 && lbs > 15) {
+    return lbs * .02
+  }
+
+  else if (.166<=age<=.333) {
+    return lbs * .1
+  }
+  else if (.333<age<=.583) {
+    return lbs * .05
+  }
+  else if (.583<age<1 ) {
+    return lbs * .04
+  }
+  }
+
+console.log(hungryDog(1,15))
+console.log(hungryDog(.5, 3))
+console.log(hungryDog(1, 7))
+
 
 
 
@@ -129,8 +173,45 @@ Use the game function below to do the following:
   HINT: While you can complete this with only conditionals based on strings, it may help to equate choice to a number when using Math.random()
 */
 
-function game(/*add your code here*/){
-    /*add your code here*/
+function game(choice1) {
+  let choice2 = Math.random();
+  if (choice2 <= 0.34) {
+    choice2 = "rock"
+  }
+  else if (choice2 <= 0.67) {
+    choice2 = "paper"
+  }
+  else {
+    choice2 = "scissors"
+  }
+
+  if (choice1 === choice2) {
+    return "it's a tie"
+  }
+
+  if (choice1 === "rock") {
+    if(choice2 === "scissors")
+    return "you win!"
+    else {
+      return "you lose!"
+    }
+  }
+  else if (choice1 === "paper") {
+     if (choice2 === "rock")
+     return "you win!"
+     else {
+       return "you lose!"
+     }
+  }
+
+  else if (choice1 === "scissors") {
+    if (choice2 === "paper")
+    return "you win!"
+    else {
+      return "you lose!"
+    }
+  }
+  
 }
   
   
@@ -146,10 +227,11 @@ Using the miles function below do the following:
   3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-    /*add your code here*/
-  }
+function miles(km) {
+  return km * .621371;
 
+}
+console.log(miles(5))
 
 
 //Task 5b - Feet to CM
@@ -160,9 +242,12 @@ Using the feet function below do the following:
   3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-    /*add your code here*/
-  }
+function feet(cm) {
+  return cm / 30.48
+
+}
+
+console.log(feet(100))
  
 
 
@@ -176,9 +261,8 @@ Using the annoyingSong function below do the following:
       "(number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall"
 */
 
-function annoyingSong(/*add your code here*/){
-        /*add your code here*/
-  }
+function annoyingSong(x){
+        
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -196,8 +280,8 @@ Using the grade function below do the following:
    below 60 = F
 */
   
-function grade(/*add your code here*/){
-    /*add your code here*/
+function grade(age){
+    age
   }
   
   
@@ -217,8 +301,8 @@ Using the vowelCounter function below do the following:
 */
 
 
-function vowelCounter(/*add your code here*/) {
-    /*add your code here*/
+function vowelCounter(age) {
+    age
 }
 
 
